@@ -32,7 +32,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#members">Members</a></li>
                 <li><a href="#photos">Photos</a></li>
@@ -60,16 +60,7 @@
 </nav>
 
 <div class="container">
-
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>AngularJS - Beginner - Two Day</h1>
-        <p>The goal of this workshop is to bring you up to speed on developing websites using AngularJS.</p>
-        <p><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-    </div>
+    <div ng-view></div>
 
 </div> <!-- /container -->
 
@@ -79,10 +70,16 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="libs/jquery/jquery-1.11.2.js"></script>
 <script src="libs/angular/angular.js"></script>
+<script src="libs/angular/angular-route.js"></script>
 <script src="libs/bootstrap/bootstrap.js"></script>
 <script src="src/app.js"></script>
+<script src="src/routes.js"></script>
 
 <!-- services, directives, & filters -->
+
+<!-- controller -->
+<script src="src/home-controller.js"></script>
+<script src="src/about-controller.js"></script>
 
 </body>
 </html>
