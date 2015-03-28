@@ -33,13 +33,13 @@ describe('Routes', function () {
     });
 
 
-    xit("should have an Members Controller", function () {
+    it("should have an Members Controller", function () {
         inject(function ($rootScope, $controller) {
             expect($controller('MembersController', {$scope: $rootScope})).toBeDefined();
         });
     });
 
-    xit("should have a members route", function () {
+    it("should have a members route", function () {
         inject(function ($route) {
             expect($route.routes['/members']).toBeDefined();
             expect($route.routes['/members'].controller).toBe('MembersController');
@@ -47,13 +47,13 @@ describe('Routes', function () {
         });
     });
 
-    xit("should have an Photos Controller", function () {
+    it("should have an Photos Controller", function () {
         inject(function ($rootScope, $controller) {
             expect($controller('PhotosController', {$scope: $rootScope})).toBeDefined();
         });
     });
 
-    xit("should have a photos route", function () {
+    it("should have a photos route", function () {
         inject(function ($route) {
             expect($route.routes['/photos']).toBeDefined();
             expect($route.routes['/photos'].controller).toBe('PhotosController');
@@ -61,13 +61,13 @@ describe('Routes', function () {
         });
     });
 
-    xit("should have an Events Controller", function () {
+    it("should have an Events Controller", function () {
         inject(function ($rootScope, $controller) {
             expect($controller('EventsController', {$scope: $rootScope})).toBeDefined();
         });
     });
 
-    xit("should have an events route", function () {
+    it("should have an events route", function () {
         inject(function ($route) {
             expect($route.routes['/events']).toBeDefined();
             expect($route.routes['/events'].controller).toBe('EventsController');
