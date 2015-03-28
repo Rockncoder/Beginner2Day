@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Binding jQuery Example</title>
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+  <script type="text/javascript" src="../libs/jquery/jquery-1.11.2.js"></script>
+</head>
+<body>
+  <div class="container" >
+    <h1>Greet-o-matic</h1>
+    <input type="text" id="firstName"/>
+    <hr/>
+    <p>Hello <span id="showName"></span>,<br/>Have a nice day!</p>
+  </div>
+  <script type="text/javascript">
+      // Here is one solution - Hooking the keyup event
+      // What happens if the user uses the context menu paste?
+      // The change event won't work since it doesn't fire until the element loses focus
+      // sample name: Jimi, Sly, PJ
+
+      $( document ).ready( function(){
+          $('#firstName').on("keyup", function(){
+              $('#showName').text(this.value);
+          });
+      });
+  </script>
+</body>
+</html>
