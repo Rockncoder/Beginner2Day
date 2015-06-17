@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Strict Mode</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css"/>
+    <script type="text/javascript" src="../../libs/jquery/jquery-1.11.2.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Strict Mode</h1>
+</div>
+<script type="text/javascript">
+    (function () {
+        firstName = "Bob";
+        var dupeKeyUncaught = {key1: 1, key1: 2};
+        var octal = 015;
+        debugger;
+    }());
+
+    (function () {
+        "use strict";
+
+
+//        var badOctal = 015;
+//        lastName = "Smith";
+//        var dupeKeyCaught = {key1: 1, key1: 2};
+
+    }());
+
+</script>
+</body>
+</html>

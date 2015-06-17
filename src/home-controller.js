@@ -3,6 +3,6 @@
 
     angular.module("BeginApp")
         .controller("HomeController", function($scope){
-
+            $scope.firstName = "Steven";
         });
 }());

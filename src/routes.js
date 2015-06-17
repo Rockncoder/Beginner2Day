@@ -7,7 +7,7 @@
                 .when("/", {
                     redirectTo: "/home"
                 })
-                .when("/home", {
+                .when("/home/", {
                     templateUrl: "templates/home.html",
                     controller: "HomeController"
                 })
@@ -26,6 +26,10 @@
                 .when("/events", {
                     templateUrl: "templates/events.html",
                     controller: "EventsController"
+                })
+                .when("/contacts", {
+                    templateUrl: "templates/contacts.html",
+                    controller: "ContactsController"
                 })
                 // in case there are no matches - send the user to the home page
                 .otherwise({

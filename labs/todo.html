@@ -8,6 +8,22 @@
 </head>
 <body>
 <div ng-controller="ToDoController" class="container">
+    <form name="form" class="form-inline" ng-submit="add()">
+        <div class="form-group">
+            <label>New Task</label>
+            <input type="text" class="form-control" ng-model="newTodo" placeholder="New Task" required/>
+            <button type="submit" class="form-control btn btn-primary" ng-disabled="form.$invalid || newTodo.length < 5">Add</button>
+        </div>
+    </form>
+    <br/>
+    <button type="button" class="btn btn-primary" ng-click="clearFinished()">Clear Finished</button>
+    <ul class="list-group">
+        <li ng-repeat="todo in todos | orderBy : 'title' " class="list-group-item">
+            <input type="checkbox" ng-model="todo.completed"/>
+            <span>{{todo.title}}</span>
+            <button type="button" class="btn btn-danger" ng-click="delete($index)">Delete</button>
+        </li>
+    </ul>
 
 </div>
 <script src="todo.js"></script>

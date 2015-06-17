@@ -40,6 +40,7 @@
                 <li><a href="#members">Members</a></li>
                 <li><a href="#photos">Photos</a></li>
                 <li><a href="#events">Events</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -63,17 +64,28 @@
 </nav>
 
 <div class="container">
-    <input id="dateField" data-rnc-date-picker ng-model="$parent.currentDate"/>
 
-    <input type="text" ng-model="timeOfDay" data-rnc-time-picker />
+    <!--<hello-directive data-title="Joe's Side Show" >-->
+        <!--<p>This is a paragraph</p>-->
+    <!--</hello-directive>-->
 
-    <hr/>
+    <!--<input id="dateField" data-rnc-date-picker ng-model="$parent.currentDate"/>-->
+    <!--<hello-directive data-title="Bob's Side Show" >-->
+        <!--<input type="text" value="42"/>-->
+    <!--</hello-directive>-->
 
-    <h2>Slider</h2>
-    <div class="container" >
-        <div data-min="0" data-max="50" data-rnc-slider-range></div>
-    </div>
-    <hr/>
+    <!--<input type="text" ng-model="timeOfDay" data-rnc-time-picker />-->
+    <!--<hello-directive data-title="Jane's Side Show" ></hello-directive>-->
+
+    <!--<hr/>-->
+
+    <!--<h2>Slider</h2>-->
+    <!--<div class="container" >-->
+        <!--<div data-min="25" data-max="65" data-rnc-slider-range></div>-->
+        <!--<br/>-->
+        <!--<rnc-slider-range data-min="1" data-max="20"></rnc-slider-range>-->
+    <!--</div>-->
+    <!--<hr/>-->
 
 
     <div ng-view></div>
@@ -94,7 +106,7 @@
 <script src="src/app.js"></script>
 <script src="src/routes.js"></script>
 
-<!-- services, directives, & filters -->contact.lastName
+<!-- services, directives, & filters -->
 <script src="src/datePicker.js"></script>
 <script src="src/timePicker.js"></script>
 
@@ -104,6 +116,7 @@
 <script src="src/members-controller.js"></script>
 <script src="src/photos-controller.js"></script>
 <script src="src/events-controller.js"></script>
+<script src="src/contacts-controller.js"></script>
 
 </body>
 </html>

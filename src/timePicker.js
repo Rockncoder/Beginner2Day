@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module("timePicker", [])
+    angular.module("bob", [])
 
         .directive('rncTimePicker', function () {
             var today = new Date(new Date().toDateString());
@@ -37,10 +37,13 @@
 
         .directive('rncSliderRange', [function () {
             return {
+                restrict: "EA",
                 scope: {
                     min: "=min",
                     max: "=max"
                 },
+                replace: true,
+                template: "<div>{{current}}</div>",
                 link: function ($scope, $element, $attr) {
                     // where is the missing time value on the setTimeout ?
                     setTimeout(function () {
